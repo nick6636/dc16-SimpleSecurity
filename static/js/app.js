@@ -1,8 +1,9 @@
 'use strict';
 
 var myApp = angular.module('myApp', [
-	'ngRoute'
-	]);
+    'ngRoute',
+    'ngResource'
+]);
 
 myApp.config(['$routeProvider',
 	function($routeProvider) {
@@ -15,3 +16,7 @@ myApp.config(['$routeProvider',
 		    redirectTo: '/'
 		});
 	}]);
+
+myApp.factory("sendSignal", function($resource) {
+    return $resource('/api/sendSignal/:signal');
+});

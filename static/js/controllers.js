@@ -1,4 +1,4 @@
-angular.module('myApp').controller('MainController', function ($scope)
+angular.module('myApp').controller('MainController', ['$scope', 'sendSignal',function ($scope, sendSignal)
 {
     $scope.lightCodes = [
 	{
@@ -23,8 +23,10 @@ angular.module('myApp').controller('MainController', function ($scope)
 	}
     ];
 
-	var pin = 0;
-	var pulseLength = 185;
-	console.log($scope.lightCodes);
-    }
-);
+    var pin = 0;
+    var pulseLength = 185;
+    $scope.sendSignal = function(signalID) {
+	console.log(signalID);
+	sendSignal.save({signal: signalID}, {});
+    };
+}]);

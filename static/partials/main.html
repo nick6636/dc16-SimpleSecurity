@@ -5,8 +5,8 @@
 
 	<body>
 	  <div ng-repeat="codes in lightCodes">
-	    <p><a href="/#/sendSignal/{{codes.on}}"> Turn light on</a></p>
-		<p><a href="/#/sendSignal/{{codes.off}}"> Turn light off</a></p>
+	    <div ng-click="sendSignal(codes.on)"> Turn light on</div>
+	    <div ng-click="sendSignal(codes.off)"> Turn light off</div>
 	   </div> 
 	</body>
 </html>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_file
+from flask import Flask, jsonify, send_file
 import datetime
 import subprocess
 
@@ -8,18 +8,11 @@ app = Flask(__name__)
 def index():
 	return send_file("templates/index.html")
 
-@app.route("/sendSignal/<signal>")
+@app.route("/api/sendSignal/<signal>", methods=['POST'])
 def main(signal):
-	now = datetime.datetime.now()
-	timeString = now.strftime("%m-%d-%Y %H: %M")
-	templateData = {
-		'title': 'Simple Security',
-		'time': timeString
-	}
-
-	subprocess.call(["./codesend", signal, "-p", "0", "-l", "185"])	
+	subprocess.call(["./codesend", signal, "-p", "0", "-l", "183"])	
 	
-	return send_file("templates/index.html")
+	return "200"
 
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=81, debug=True)
