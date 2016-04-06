@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+	<head>
+		<title>Simple Security</title>
+	</head>
+
+	<body>
+	  <div ng-repeat="codes in lightCodes">
+	    <p><a href="/#/sendSignal/{{codes.on}}"> Turn light on</a></p>
+		<p><a href="/#/sendSignal/{{codes.off}}"> Turn light off</a></p>
+	   </div> 
+	</body>
+</html>

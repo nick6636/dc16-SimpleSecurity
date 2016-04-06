@@ -1,21 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 import datetime
 import subprocess
 
 app = Flask(__name__)
 
 @app.route("/")
-def backend():
-	now = datetime.datetime.now()
-	timeString = now.strftime("%Y-%m-%d %H:%M")
-	templateData = {
-		'title': 'Simple Security',
-		'time': timeString
-	}
+def index():
+	return send_file("templates/index.html")
 
-	return render_template('main.html', **templateData)
-
-@app.route("/<signal>")
+@app.route("/sendSignal/<signal>")
 def main(signal):
 	now = datetime.datetime.now()
 	timeString = now.strftime("%m-%d-%Y %H: %M")
@@ -26,7 +19,7 @@ def main(signal):
 
 	subprocess.call(["./codesend", signal, "-p", "0", "-l", "185"])	
 	
-	return render_template('main.html', **templateData)
+	return send_file("templates/index.html")
 
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=81, debug=True)
