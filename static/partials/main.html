@@ -3,10 +3,16 @@
 		<title>Simple Security</title>
 	</head>
 
-	<body>
-	  <div ng-repeat="codes in lightCodes">
-	    <div ng-click="sendSignal(codes.on)"> Turn light on</div>
-	    <div ng-click="sendSignal(codes.off)"> Turn light off</div>
-	   </div> 
-	</body>
+<body class="jumbotron">
+  <h1>Simple Security</h1>
+  <table class="container">
+    <tr ng-repeat="codes in lightCodes track by $index">
+      <td style="font-size:30px">Light {{$index + 1}}</td>
+      <td><button type="button" class="btn btn-lg btn-success"  ng-click="sendSignal(codes.on)"> Turn light on
+      </button></td>
+      <td><button type="button" class="btn btn-lg btn-danger"  ng-click="sendSignal(codes.off)"> Turn light off
+      </button></td>
+      </tr>
+    </table>
+</body>
 </html>
