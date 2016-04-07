@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-	<head>
-		<title>Simple Security</title>
-	</head>
+<head>
+  <title>Simple Security</title>
+</head>
 
-<body class="jumbotron">
-  <h1>Simple Security</h1>
-  <table class="container">
-    <tr ng-repeat="codes in lightCodes track by $index">
-      <td style="font-size:30px">Light {{$index + 1}}</td>
-      <td><button type="button" class="btn btn-lg btn-success"  ng-click="sendSignal(codes.on)"> Turn light on
-      </button></td>
-      <td><button type="button" class="btn btn-lg btn-danger"  ng-click="sendSignal(codes.off)"> Turn light off
-      </button></td>
-      </tr>
-    </table>
+<body class="container-fluid">
+  <div>
+    <div class="center-block" style="width:75%">
+      <h1 class="text-center">Simple Security</h1>
+      <table class="text-center center-block" style="display:table">
+	<tr ng-repeat="codes in lightCodes track by $index">
+	  <td style="font-size:30px">Light {{$index + 1}}</td>
+	  <td><button type="button" class="btn btn-lg btn-success"  ng-click="sendSignal(codes.on)"> Turn on
+	  </button></td>
+	  <td><button type="button" class="btn btn-lg btn-danger"  ng-click="sendSignal(codes.off)"> Turn off
+	  </button></td>
+	</tr>
+      </table>
+    </div>
+    </div>
 </body>
 </html>
