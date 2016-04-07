@@ -14,3 +14,13 @@ and provides a live stream from a camera connected to the Raspberry Pi.
 Implemented an initial frontend/backend combination that provides a simplistic interface 
 for turning on a single remote outlet, but not turn it off. The next step for this part of the project
 is to implement the rest of the channels of the outlets nad to create a better looking UI.
+
+#Progress (Week 4/5)
+Implemented the angular infrastructure for the frontend and added functionality for turning on all of the lights.
+Also did UI work to make the project look better.
+The next step for me is researching databases and to decide which one to use (preferably one that works well with Flask)
+
+#Future Plans
+Get a database working to record whether a light is on or off
+Add user authentication so that not just anyone can control my lights
+Research creating an app for Android and Android Wear to interface with the project
