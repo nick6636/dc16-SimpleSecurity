@@ -20,6 +20,10 @@ Implemented the angular infrastructure for the frontend and added functionality 
 Also did UI work to make the project look better.
 The next step for me is researching databases and to decide which one to use (preferably one that works well with Flask)
 
+#Progress (Week 4/12)
+Implemented a simple Android app that can communicate with the Raspberry and can turn  any of the lights on or off.
+Also began working on the Android Wear Companion App.
+
 #Future Plans
 Get a database working to record whether a light is on or off
 Add user authentication so that not just anyone can control my lights
