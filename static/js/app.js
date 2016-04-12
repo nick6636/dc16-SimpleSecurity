@@ -20,3 +20,8 @@ myApp.config(['$routeProvider',
 myApp.factory("sendSignal", function($resource) {
     return $resource('/api/sendSignal/:signal');
 });
+
+myApp.factory("sendSignalDelay", function($resource) {
+    return $resource('/api/sendSignalDelay/:delay/:signal');
+});
+

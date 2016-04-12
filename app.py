@@ -14,6 +14,12 @@ def main(signal):
 	
 	return "200"
 
+@app.route("/api/sendSignalDelay/<signal>/<delay>", methods=['POST'])
+def mainDelay(delay, signal):
+	subprocess.call(["sleep", delay])
+	subprocess.call(["./codesend", signal, "-p", "0", "-l", "183"])
+	return "200"
+
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=81, debug=True)
 

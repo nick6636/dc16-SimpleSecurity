@@ -1,5 +1,6 @@
-angular.module('myApp').controller('MainController', ['$scope', 'sendSignal',function ($scope, sendSignal)
+angular.module('myApp').controller('MainController', ['$scope', 'sendSignal', 'sendSignalDelay',function ($scope, sendSignal, sendSignalDelay)
 {
+    $scope.time = 0;
     $scope.lightCodes = [
 	{
 	    "on": 5510451,
@@ -28,5 +29,9 @@ angular.module('myApp').controller('MainController', ['$scope', 'sendSignal',fun
     $scope.sendSignal = function(signalID) {
 	console.log(signalID);
 	sendSignal.save({signal: signalID}, {});
+    };
+    $scope.sendSignalDelay = function(signalID, delayTime) {
+        console.log(signalID);
+        sendSignalDelay.save({delay: delayTime, signal: signalID}, {});
     };
 }]);
