@@ -1,7 +1,6 @@
 # Simple Security
 
 # Team Members
-Chen Chen
 Steven Scheffelaar Klots
 
 # Project Description
@@ -24,7 +23,10 @@ The next step for me is researching databases and to decide which one to use (pr
 Implemented a simple Android app that can communicate with the Raspberry and can turn  any of the lights on or off.
 Also began working on the Android Wear Companion App.
 
+#Progress (Week 4/19)
+Had to reimplement the service that I used to send HTTP requests to the Raspberry Pi as the one that I had written
+would not work well with the Android Wear device. Still working on implementing the Android Wear portion of the app.
+
 #Future Plans
 Get a database working to record whether a light is on or off
 Add user authentication so that not just anyone can control my lights
-Research creating an app for Android and Android Wear to interface with the project
