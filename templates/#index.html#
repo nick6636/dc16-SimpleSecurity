@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<title>Simple Security</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-route.min.js
+	</head>
+	<body>
+	  <div> Here is some stuff</div>
+	  <div ng-view></div>
+	</body>
+</html>
